@@ -11,7 +11,7 @@ Matthieu Finiasz : cryptologue, enseignant-chercheur, crypto-expert
 
 [Thomas Baigneres](https://www.linkedin.com/in/baigneres/) : Cryptologue, crypto-expert
 
-![Cap ecran Wireshark](<https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FOlvid&psig=AOvVaw1_Liz-fKamfZT32VMZ7iZG&ust=1722002156344000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCID13oaswocDFQAAAAAdAAAAABAE>)
+![logo OVALIDE](<https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FOlvid&psig=AOvVaw1_Liz-fKamfZT32VMZ7iZG&ust=1722002156344000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCID13oaswocDFQAAAAAdAAAAABAE>)
 
 Une messagerie sécurisée est contraignante pour plusieurs raisons, comme discuté dans le podcast NoLimitSecu. Voici les principales contraintes :
 
