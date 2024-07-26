@@ -1,4 +1,52 @@
-Une messagerie sécurisée est contraignante pour plusieurs raisons, comme discuté dans le podcast NoLimitSecu. Voici les principales contraintes :
+Une messagerie sécurisée est contraignante pour plusieurs raisons, comme discuté dans le podcast NoLimitSecu. 
+
+## Présentation des interlocuteurs :
+
+intervenant : Matthieu Finiasz et [Thomas Baigneres](https://www.linkedin.com/in/baigneres/) société Olvide 
+
+Contributeur NoLimitSecu : Paul amar, hervé Shoer, Nicolas Rue
+
+Matthieu Finiasz : cryptologue, enseignant-chercheur, crypto-expert
+
+[Thomas Baigneres](https://www.linkedin.com/in/baigneres/) : Cryptologue, crypto-expert
+
+## Contexte :
+
+Olvide est une société qui propose une messagerie instantanée sécurisée
+ils font de la sécu de bout en bout
+
+- fonctionne un peu comme Whatsapp
+- une version payante et une version gratuite
+
+la payante comprends : 
+
+- Multi appareil synchronisé 
+- Appel et appel visio
+- Bot olvide, automatisation de message
+
+Toutes les informations échangées via Olvid sont [chiffrées de bout en bout](https://fr.wikipedia.org/wiki/Chiffrement_de_bout_en_bout).
+
+- Système de chiffrement qui permet seulement à l’utilisateur d’avoir accès à ses données, la société Olvide ne peut pas y avoir accès car les données sont chiffrés
+
+- Nos serveurs sont hébergés par AWS. La rupture technologique d’Olvid est de garantir la sécurité de ses utilisateurs via des mécanismes cryptographiques, qui n’ont pas de nationalité, sans avoir à faire confiance aux serveurs.
+
+- Ne conserve pas l’adresse IP des clients sur leurs serveurs
+
+- Pas de tracker
+
+- A la création du compte, aucune donnée n’est envoyé aux serveurs, le compte est stocké en local sur l’endpoint, Olvide utilise l’adresse IP pour son fonctionnement 
+
+- Pas de sous-traitant à part les serveurs AWS
+
+les données échangées avec Olvid sont ***systématiquement*** chiffrées de bout en bout. Tout ce qu’un appareil envoie sur le réseau via Olvid présente la structure suivante :
+
+`Données chiffrées ou aléatoires || Clé publique du destinataire`
+
+Étant donnés les algorithmes de chiffrement utilisés par Olvid (dans le cas des messages : Encrypt-then-MAC avec AES-256 en mode CTR et HMAC sur SHA256), les données chiffrées sont indistinguables de données aléatoires uniformément distribuées (autrement dit, indistinguables d’un bruit numérique). Il est donc cryptographiquement impossible d’en extraire quelque information que ce soit (en dehors de la taille de la donnée chiffrée, mais là encore, Olvid applique certaines techniques pour mitiger ce risque). La clé publique du destinataire (en clair) permet de transmettre le message à son destinataire (à l’image d’une adresse sur une enveloppe cachetée). Cette clé publique ne permet pas de déduire la moindre information personnelle sur son propriétaire (i.e., sur l’appareil détenant la clé cryptographique privée correspondante).
+
+confidentialité :  Si Olvid n’est pas l’unique solution de messagerie instantanée grand public à proposer du chiffrement de bout en bout, ***elle garantit également l’authentification de bout en bout, autrement dit, à ne pas faire reposer la confidentialité et l’authenticité des échanges sur un annuaire centralisé***.
+
+Voici les principales contraintes :
 
 1. **Complexité du chiffrement** : Mettre en place et gérer des systèmes de chiffrement robustes est techniquement complexe. Cela implique l'utilisation de clés publiques et privées, la gestion de certificats, et des protocoles de chiffrement avancés pour assurer que seules les parties autorisées peuvent lire les messages.
 
